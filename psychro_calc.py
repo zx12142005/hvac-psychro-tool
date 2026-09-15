@@ -86,7 +86,7 @@ def calc(tdb: float, rh: float, pressure: float = STANDARD_PRESSURE) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description="HVAC 湿空气计算工具")
     parser.add_argument("--tdb", type=float, required=True, help="干球温度（℃）")
-    parser.add_argument("--rh", type=float, required=True, help="相对湿度（%，0-100）")
+    parser.add_argument("--rh", type=float, required=True, help="相对湿度（0-100，单位：%%）")
     parser.add_argument("--p", type=float, default=STANDARD_PRESSURE, help="大气压（Pa），默认 101325")
     args = parser.parse_args()
 
